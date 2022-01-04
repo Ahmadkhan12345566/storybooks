@@ -6,11 +6,15 @@ dotenv.config({path:'./config/config.env'})
 const connectDB = async ()=>{
     try{
 
+        console.log(`MongoDB Connection`)
         const conn = await  mongoose.connect(process.env.MONGO_URI,{
             useNewUrlParser : true,
             useUnifiedTopology : true,
         })
+        console.log(conn);
         console.log(`MongoDB Connected : ${conn.connection.host}`)
+
+
     }catch (err){
         console.error(err)
         process.exit(1);
