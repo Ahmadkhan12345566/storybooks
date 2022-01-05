@@ -8,7 +8,7 @@ const session =require('express-session');
 
 const expbhs = require('express-handlebars');
 
-connectDB();
+// connectDB();
 
 
 //Load config
